@@ -5,12 +5,13 @@ public class ThreadCruzamento extends Thread {
 
 	int idcarro;
 	Semaphore semaforo;
-	static String direção;
+	String direção;
 	static int aguardar = 100;
 	
-	public ThreadCruzamento(int i, Semaphore semaforo) {
+	public ThreadCruzamento(int i, Semaphore semaforo, String direcao) {
 		this.semaforo = semaforo;
 		idcarro = i;
+		direção = direcao;
 	}
 	
 	@Override
